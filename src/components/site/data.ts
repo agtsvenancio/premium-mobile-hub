@@ -78,7 +78,7 @@ const pool: Product[] = [
 ];
 
 function cycle(count: number, offset = 0): Product[] {
-  return Array.from({ length: count }, (_, i) => pool[(i + offset) % pool.length]);
+  return Array.from({ length: count }, (_, i) => pool[(i + offset) % pool.length]!);
 }
 
 export const featured = cycle(8, 0);
